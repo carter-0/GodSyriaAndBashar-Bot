@@ -1,5 +1,6 @@
 from discord.utils import get
 import discord
+import os
 
 client = discord.Client()
 
@@ -25,4 +26,4 @@ async def on_message(message):
 			voice.play(audio, after=lambda e: repeat(voice, audio, channel))
 			voice.is_playing()
 
-client.run("ODcwMDM5NDY5MzQzMDAyNjU1.YQG9Zg.smEZu1DMyTa1_fW6GWE-YZr3YgU")
+client.run(os.environ['token'])
